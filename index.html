@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--A-Frame CON-->
+    <!--
+
+capa 1
+          position: absolute;
+        z-index: 1;
+        background-color: #FFFFFF;
+
+    <style type="text/css">
+      #capa1 {
+        position: absolute;
+        botton:0px;
+        right:0px;
+
+
+        z-index: 1;
+        transform: scale(0.1);
+
+          width: auto;
+          height: auto;
+
+        }
+
+z-index: 1;
+-->
+    <style type="text/css">
+                   #capa1 {
+                       position: absolute;
+
+
+                       border-radius: 50%;
+          height: 30px;
+          width: 30px;
+          margin: 10px;
+
+          .container:hover & {
+            transform: translateX(200px);
+
+              @extend .circle;
+      background: PaleTurquoise;
+      transition: all 1.5s linear;
+          }
+
+                     }
+                   }
+                   #capa2 {
+                     position: absolute;
+                     z-index: 0;
+                   }
+    </style>
+
+    <script
+      src="https://aframe.io/releases/1.0.3/aframe.min.js"
+      width="10%"
+      height="10%"
+    ></script>
+    <!-- superframe orbit-controls CON-->
+    <script src="https://unpkg.com/aframe-orbit-controls@1.2.0/dist/aframe-orbit-controls.min.js"></script>
+  </head>
+  <body>
+    <div id="capa1">
+      <img
+        src="https://cdn.glitch.com/4fb0575d-8321-49f5-b3a7-7a4b100c96c1%2Fmanoverdaderascroll.png?v=1596706752036"
+        class="vert-move"
+      />
+    </div>
+    <div id="capa2">
+      <a-image
+        src="https://cdn.glitch.com/4fb0575d-8321-49f5-b3a7-7a4b100c96c1%2Fmanoverdaderascroll.png?v=1596706752036"
+      ></a-image>
+      <a-scene vr-mode-ui="enabled: false">
+        <a-entity
+          camera
+          look-controls
+          orbit-controls="target: 0 0.5 0;
+          maxPolar Angle:180;
+          minDistance: 0.5;
+          maxDistance: 2;
+          initialPosition: 0 0 20
+          initialRotation:0 0 0"
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 50000"
+        ></a-entity>
+
+        <a-entity
+          light="type: directional; intensity: 0.5"
+          look-at="a-gltf-model"
+          position="-5 0 0"
+          rotation="0 0 0"
+        ></a-entity>
+
+        <a-entity
+          light="type: directional; intensity: 0.5"
+          look-at="a-gltf-model"
+          position="5 0 0"
+          rotation="0 0 0"
+        ></a-entity>
+
+        <a-entity
+          light="type: directional; intensity: 0.5"
+          look-at="a-gltf-model"
+          position="0 5 0"
+          rotation="0 0 0"
+        ></a-entity>
+
+        <a-entity
+          light="type: directional; intensity: 0.5"
+          look-at="a-gltf-model"
+          position="0 -5 0"
+          rotation="0 0 0"
+        ></a-entity>
+        <a-entity
+          light="type: directional; intensity: 0.5"
+          look-at="a-gltf-model"
+          position="0 0 5"
+          rotation="0 0 0"
+        ></a-entity>
+
+        <a-entity
+          light="type: directional; intensity: 0.5"
+          look-at="a-gltf-model"
+          position="0 0 -5"
+          rotation="0 0 0"
+        ></a-entity>
+
+        <!--
+      <a-entity
+        light="color: #FFF; intensity: 2.5"
+        position="-0.5 1 1"
+        rotation="0 0 0"
+      ></a-entity>
+      
+      <a-entity
+        light="type: directional; color: #FFF; intensity: 2.5"
+        position="-0.5 1 1"
+        rotation="0 0 0"
+      ></a-entity>
+      
+      <a-entity
+        light="type: directional; color: #FFF; intensity: 2.5"
+        position="-0.5 6 100"
+        rotation="0 0 0"
+      ></a-entity>
+      
+      <a-entity
+        light="type: directional; color: #FFF; intensity: 2.5"
+        ;
+        position="10000 -1 -1"
+        rotation="0 0 0"
+      ></a-entity>
+
+      <a-entity
+        light="type: point; color: #FFF; intensity: 10"
+        ;
+        scale="1000000 1000000 1000000"
+        position="0.5 -1 -1"
+        rotation="0 0 0"
+      ></a-entity>
+
+      <a-entity
+        light="type: ambient;
+   color: #FFF;
+   intensity: 2.5"
+      ></a-entity>
+
+      <a-entity
+        light="type: point; color: #FFF; intensity: 10"
+        ;
+        scale="1000000 1000000 1000000"
+        position=" -0.5 1 1"
+        rotation="0 0 0"
+      ></a-entity>
+
+     
+      <a-entity
+        light="type: directional; color: #FFF; intensity: 10"
+        position="-0.5 1 1"
+        rotation="0 0 0"
+      ></a-entity>
+
+      
+      <a-entity
+        light="type: directional; color: #FFF; intensity: 10"
+        position="-0.5 1 1"
+        rotation="180 180 180"
+      ></a-entity>  -->
+
+        <a-gltf-model
+          src="https://cdn.glitch.com/4fb0575d-8321-49f5-b3a7-7a4b100c96c1%2Fsilla5.glb?v=1596441930367"
+          position="0 0 0"
+          scale="0.1 0.1 0.1"
+          rotation="0 0 0"
+        ></a-gltf-model>
+
+        <!--
+      <a-entity
+        gltf-model="https://cdn.glitch.com/c163dc72-6a91-41e1-af7f-61c7463fbc53%2Farcotriunfo.glb?v=1596106649344"
+        scale="0.1 0.1 0.1"
+        position="0 0 0"
+      >
+      </a-entity> -->
+        <a-sky color="#70bcd1"></a-sky>
+
+        "
+      </a-scene>
+    </div>
+  </body>
+</html>
